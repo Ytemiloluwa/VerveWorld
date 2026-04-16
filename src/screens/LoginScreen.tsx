@@ -36,11 +36,13 @@ const LoginScreen = () => {
         <View style={styles.form}>
           <TextField
             label="Email Address"
+            textColor={colors.textSecondary}
             placeholder="Eg. Johndoe@email.com"
             keyboardType="email-address"
           />
           <TextField
             label="Password"
+            textColor= {colors.textSecondary}
             placeholder="Password"
             secureTextEntry={!showPassword}
             isPassword

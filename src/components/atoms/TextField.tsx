@@ -12,6 +12,7 @@ import ShowPassword from '../../assets/svgs/showPassword.svg';
 
 interface TextFieldProps extends TextInputProps {
   label: string;
+  textColor: string;
   isPassword?: boolean;
   onToggleVisibility?: () => void;
   secureTextEntry?: boolean;
@@ -19,6 +20,7 @@ interface TextFieldProps extends TextInputProps {
 
 export const TextField = ({
   label,
+  textColor,
   isPassword,
   onToggleVisibility,
   ...props
@@ -34,7 +36,7 @@ export const TextField = ({
       </Typography>
       <View style={styles.inputContainer}>
         <TextInput
-          style={styles.input}
+          style={[styles.input, { color: textColor }]}
           placeholderTextColor= {colors.placeholderTextColor}
           {...props}
         />
