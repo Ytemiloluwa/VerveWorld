@@ -4,7 +4,10 @@ import { colors } from '../../theme/colors';
 
 export enum AppTextStyle {
   heading5,
+  heading6,
+  bodyMedium,
   bodyMediumBold,
+  link,
 }
 
 type Props = TextProps & {
@@ -16,7 +19,7 @@ type Props = TextProps & {
 export const Typography = ({
   textstyle = AppTextStyle.bodyMediumBold,
   style,
-  color = colors.textPrimary, 
+  color = colors.textPrimary,
   textAlign,
   ...props
 }: Props) => {
@@ -31,7 +34,25 @@ const styles = StyleSheet.create({
     fontSize: 28,
     lineHeight: 36,
   },
+  [AppTextStyle.heading6]: {
+    fontWeight: '700',
+    fontSize: 20,
+    lineHeight: 32,
+    letterSpacing: 0,
+  },
+
+  [AppTextStyle.bodyMedium]: {
+    fontSize: 14,
+    fontWeight: '400',
+    lineHeight: 20,
+  },
+
   [AppTextStyle.bodyMediumBold]: {
+    fontSize: 14,
+    fontWeight: '600',
+    lineHeight: 20,
+  },
+  [AppTextStyle.link]: {
     fontSize: 14,
     fontWeight: '600',
     lineHeight: 20,

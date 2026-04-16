@@ -8,6 +8,7 @@ interface ButtonProps {
   onPress: () => void;
   variant?: 'primary' | 'outline';
   style?: ViewStyle;
+  textColor?: string;
 }
 
 export const Button = ({
@@ -15,8 +16,10 @@ export const Button = ({
   onPress,
   variant = 'primary',
   style,
+  textColor,
 }: ButtonProps) => {
   const isPrimary = variant === 'primary';
+  const buttonTextColor = textColor ? textColor : isPrimary ? colors.textSecondary : colors.textPrimary;
 
   return (
     <TouchableOpacity
@@ -24,7 +27,7 @@ export const Button = ({
       style={[styles.base, isPrimary ? styles.primary : styles.outline, style]}
     >
       <Typography
-        color={isPrimary ? colors.textSecondary : colors.textPrimary}
+        color={buttonTextColor}
         textstyle={AppTextStyle.bodyMediumBold}
       >
         {title}
