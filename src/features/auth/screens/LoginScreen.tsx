@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
-import { Typography, AppTextStyle } from '../components/atoms/Typography';
-import { TextField } from '../components/atoms/TextField';
-import { Button } from '../components/atoms/Button';
-import { colors } from '../theme/colors';
-import VerveLogo from '../assets/svgs/SignUpBrands.svg';
-import FaceID from '../assets/svgs/faceID.svg';
+import { Typography, AppTextStyle } from '../../../components/atoms/Typography';
+import { TextField } from '../../../components/atoms/TextField';
+import { Button } from '../../../components/atoms/Button';
+import { colors } from '../../../theme/colors';
+import VerveLogo from '../../../assets/svgs/SignUpBrands.svg';
+import FaceID from '../../../assets/svgs/faceID.svg';
 
 const LoginScreen = () => {
   const [showPassword, setShowPassword] = useState(false);

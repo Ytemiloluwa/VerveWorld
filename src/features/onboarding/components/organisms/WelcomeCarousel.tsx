@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
-import { Typography, AppTextStyle } from '../atoms/Typography';
-import { colors } from '../../theme/colors';
-import { spacing } from '../../theme/spacing';
+import { Typography, AppTextStyle } from '../../../../components/atoms/Typography';
+import { colors } from '../../../../theme/colors';
+import { spacing } from '../../../../theme/spacing';
 
 const { width } = Dimensions.get('window');
 

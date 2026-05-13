@@ -11,20 +11,25 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import RootNavigator from './src/navigation/RootNavigator';
 
+import { Provider } from 'react-redux';
+import { store } from './src/store';
+
 function App() {
   return (
-    <GestureHandlerRootView style={styles.root}>
-      <SafeAreaProvider>
-        <StatusBar
-          barStyle="light-content"
-          translucent
-          backgroundColor="transparent"
-        />
-        <View style={styles.container}>
-          <RootNavigator />
-        </View>
-      </SafeAreaProvider>
-    </GestureHandlerRootView>
+    <Provider store={store}>
+      <GestureHandlerRootView style={styles.root}>
+        <SafeAreaProvider>
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor="transparent"
+          />
+          <View style={styles.container}>
+            <RootNavigator />
+          </View>
+        </SafeAreaProvider>
+      </GestureHandlerRootView>
+    </Provider>
   );
 }
 

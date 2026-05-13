@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, ImageBackground } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { colors } from '../theme/colors';
-import { spacing } from '../theme/spacing';
-import { Button } from '../components/atoms/Button';
-import { LegalFooter } from '../components/molecules/LegalFooter';
+import { colors } from '../../../theme/colors';
+import { spacing } from '../../../theme/spacing';
+import { Button } from '../../../components/atoms/Button';
+import { LegalFooter } from '../../../components/molecules/LegalFooter';
 import { WelcomeCarousel } from '../components/organisms/WelcomeCarousel';
-import VerveLogo from '../assets/images/brands.svg';
+import VerveLogo from '../../../assets/images/brands.svg';
 
 const carouselData = [
   'Enjoy Rewards Everytime You Transact With Verve',
@@ -14,8 +14,8 @@ const carouselData = [
 ];
 
 const images = [
-  require('../assets/images/VerveImageOne.jpg'),
-  require('../assets/images/VerveImageTwo.jpg'),
+  require('../../../assets/images/VerveImageOne.jpg'),
+  require('../../../assets/images/VerveImageTwo.jpg'),
 ];
 
 const WelcomeScreen = ({ navigation }: any) => {
