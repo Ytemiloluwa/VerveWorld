@@ -5,11 +5,23 @@ interface AuthState {
   user: {
     email: string;
   } | null;
+  signupForm: {
+    email: string;
+    fullName: string;
+    phoneCode: string;
+    phoneNumber: string;
+  };
 }
 
 const initialState: AuthState = {
   isAuthenticated: false,
   user: null,
+  signupForm: {
+    email: '',
+    fullName: '',
+    phoneCode: '+234',
+    phoneNumber: '',
+  },
 };
 
 const authSlice = createSlice({
@@ -24,8 +36,15 @@ const authSlice = createSlice({
       state.isAuthenticated = false;
       state.user = null;
     },
+    updateSignupForm: (
+      state,
+      action: PayloadAction<Partial<AuthState['signupForm']>>
+    ) => {
+      state.signupForm = { ...state.signupForm, ...action.payload };
+    },
   },
 });
 
-export const { login, logout } = authSlice.actions;
+export const { login, logout, updateSignupForm } = authSlice.actions;
+
 export default authSlice.reducer;
