@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import WelcomeScreen from '../screens/WelcomeScreen';
-import LoginScreen from '../screens/LoginScreen';
-import SignUpScreen from '../screens/SignUpScreen';
+import WelcomeScreen from '../features/onboarding/screens/WelcomeScreen';
+import LoginScreen from '../features/auth/screens/LoginScreen';
+import SignUpScreen from '../features/auth/screens/SignUpScreen';
 
 export type RootStackParamList = {
   Welcome: undefined;

@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
-import { Typography, AppTextStyle } from '../components/atoms/Typography';
-import { TextField } from '../components/atoms/TextField';
-import { Button } from '../components/atoms/Button';
-import { colors } from '../theme/colors';
-import VerveLogo from '../assets/svgs/SignUpBrands.svg';
-import FaceID from '../assets/svgs/faceID.svg';
+import { Typography, AppTextStyle } from '../../../components/atoms/Typography';
+import { TextField } from '../../../components/atoms/TextField';
+import { Button } from '../../../components/atoms/Button';
+import { colors } from '../../../theme/colors';
+import VerveLogo from '../../../assets/svgs/SignUpBrands.svg';
+import FaceID from '../../../assets/svgs/faceID.svg';
+import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
+  const navigation = useNavigation<any>();
   const [showPassword, setShowPassword] = useState(false);
+  const handleSignUpNav = () => navigation.navigate('SignUp');
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         {/* Header Logo */}
-        <VerveLogo width={50} height={17}/>
+        <VerveLogo width={50} height={17} />
 
         {/* Title Group */}
         <View style={styles.titleGroup}>
@@ -42,7 +45,7 @@ const LoginScreen = () => {
           />
           <TextField
             label="Password"
-            textColor= {colors.textSecondary}
+            textColor={colors.textSecondary}
             placeholder="Password"
             secureTextEntry={!showPassword}
             isPassword
@@ -84,7 +87,7 @@ const LoginScreen = () => {
             <Typography
               textstyle={AppTextStyle.link}
               color={colors.SignUp}
-              onPress={() => {}}
+              onPress={handleSignUpNav}
             >
               Sign Up
             </Typography>

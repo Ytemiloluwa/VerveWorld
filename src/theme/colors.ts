@@ -23,5 +23,17 @@ export const colors = {
   inputBorder: '#F3F5f6', 
   buttonSecondary: '#F4B7B5', 
   SignUp: '#A4251A',
-  placeholderTextColor: "#B0B9C5"
+  placeholderTextColor: "#B0B9C5",
+
+  // Password Requirements
+  passwordMetText: '#4CAF50',
+  passwordUnmetText: '#A0AAB6',
+  passwordMetBg: '#E8F5E9',
+  passwordUnmetBg: '#F3F5F6',
+
+  // Checkbox
+  checkboxChecked: '#000000',
+
+  // Misc
+  flagGreen: '#008751',
 };
