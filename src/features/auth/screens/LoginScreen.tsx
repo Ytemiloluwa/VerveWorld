@@ -12,6 +12,7 @@ const LoginScreen = () => {
   const navigation = useNavigation<any>();
   const [showPassword, setShowPassword] = useState(false);
   const handleSignUpNav = () => navigation.navigate('SignUp');
+  const handleForgotPasswordNav = () => navigation.navigate('ResetPassword');
 
   return (
     <SafeAreaView style={styles.container}>
@@ -52,7 +53,7 @@ const LoginScreen = () => {
             onToggleVisibility={() => setShowPassword(!showPassword)}
           />
 
-          <TouchableOpacity style={styles.forgotBtn}>
+          <TouchableOpacity style={styles.forgotBtn} onPress={handleForgotPasswordNav}>
             <Typography
               textstyle={AppTextStyle.bodyMedium}
               color={colors.forgotPassword}
