@@ -38,6 +38,9 @@ export const styles = StyleSheet.create({
   continueBtn: {
     width: '100%',
   },
+  contentContainer: {
+    paddingBottom: 40,
+  },
   continueBtnActive: {
     backgroundColor: colors.SignUp,
   },

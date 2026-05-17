@@ -1,5 +1,13 @@
 import React from 'react';
-import { View, SafeAreaView, TouchableOpacity, ScrollView, StyleProp, ViewStyle, StyleSheet } from 'react-native';
+import {
+  View,
+  SafeAreaView,
+  TouchableOpacity,
+  ScrollView,
+  StyleProp,
+  ViewStyle,
+  StyleSheet,
+} from 'react-native';
 import { Typography, AppTextStyle } from '../../../components/atoms/Typography';
 import { TextField } from '../../../components/atoms/TextField';
 import { Button } from '../../../components/atoms/Button';
@@ -15,13 +23,15 @@ const ResetPasswordScreen = () => {
     styles.continueBtn,
     isEmailValid ? styles.continueBtnActive : styles.continueBtnInactive,
   ];
-  const continueBtnStyleFlat: ViewStyle = StyleSheet.flatten(continueBtnStyle) as ViewStyle;
+  const continueBtnStyleFlat: ViewStyle = StyleSheet.flatten(
+    continueBtnStyle,
+  ) as ViewStyle;
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView 
+      <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 40 }}
+        contentContainerStyle={styles.contentContainer}
       >
         <View style={styles.content}>
           <View style={styles.headerRow}>
